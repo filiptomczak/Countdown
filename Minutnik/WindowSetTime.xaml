@@ -1,0 +1,45 @@
+﻿<Window
+    x:Class="Minutnik.WindowSetTime"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Minutnik"
+        mc:Ignorable="d"
+        Title="Settings" Height="220" Width="250" MinWidth="250" MinHeight="220" MaxWidth="350" MaxHeight="220" ResizeMode="CanResize" ShowInTaskbar="False">
+    <Grid>
+        <Grid HorizontalAlignment="Center" Height="106" Margin="32,10,31.2,0" VerticalAlignment="Top" Width="180">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="3*"/>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="3*"/>
+                <ColumnDefinition Width="1*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="1.5*"/>
+                <RowDefinition Height="1.3*"/>
+                <RowDefinition Height="1.5*"/>
+            </Grid.RowDefinitions>
+            <Button Grid.Column="1" Grid.Row="0" x:Name="button_addMin" Content="+" FontFamily="GENISO" FontSize="16" FontWeight="Bold" 
+                BorderThickness="0" Background="#FF5EC1B8" Click="on_addMin" Margin="0,0,0,2.4"/>
+            <Button Grid.Column="3" Grid.Row="0" x:Name="button_addSec" Content="+" FontFamily="GENISO" FontSize="16" FontWeight="Bold"
+                BorderThickness="0" Background="#FF5EC1B8" Click="on_addSec" Margin="0,0,0,2.4"/>
+
+            <TextBox  Grid.Column="1" x:Name="text_mins"  BorderThickness="0" HorizontalAlignment="Left" TextWrapping="Wrap" Text="00" VerticalAlignment="Center" Height="18" Width="58" FontFamily="GENISO" FontSize="16" FontWeight="Bold" TextAlignment="Center" TextChanged="text_mins_TextChanged" Margin="0,2.6,0,0.2" Grid.Row="1"/>
+            <Label Grid.Column="2" Content=":" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="GENISO" FontSize="16" FontWeight="Bold" Width="12" Height="11" Margin="3,42,5,10.2" Grid.RowSpan="2" />
+            <TextBox Grid.Column="3" Grid.Row="1" x:Name="text_secs"  BorderThickness="0" HorizontalAlignment="Right" TextWrapping="Wrap" Text="00" VerticalAlignment="Center" Height="21" Width="60" FontFamily="GENISO" FontSize="16" FontWeight="Bold" TextAlignment="Center" TextChanged="text_secs_TextChanged" Margin="0,2.6,0,39.6" Grid.RowSpan="2" />
+
+            <Button Grid.Column="1" Grid.Row="2" x:Name="button_subMin" Content="-" Width="60" FontFamily="GENISO" FontSize="16" FontWeight="Bold"
+                BorderThickness="0" Background="#FFC15E75" Click="on_subMin"/>
+            <Button Grid.Column="3" Grid.Row="2" x:Name="button_subSec" Content="-" Width="60" FontFamily="GENISO" FontSize="16" FontWeight="Bold"
+                BorderThickness="0" Background="#FFC15E75" Click="on_subSec"/>
+        </Grid>
+        <CheckBox x:Name="check_shutdown" Content="Shut down computer" HorizontalAlignment="Left" Margin="55,121,0,0" VerticalAlignment="Top" Width="134"/>
+        <Button x:Name="button_start" Content="Start" HorizontalAlignment="Center" Margin="0,0,0,10" VerticalAlignment="Bottom"
+                Width="180" RenderTransformOrigin="-0.792,0.392" Height="30" FontFamily="GENISO" FontSize="16" FontWeight="Bold"
+                BorderThickness="0" Background="#FF945EC1" Click="button_start_Click" />
+
+
+    </Grid>
+</Window>

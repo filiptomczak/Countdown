@@ -1,0 +1,25 @@
+﻿<UserControl x:Class="Minutnik.Zegar"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Minutnik"
+             mc:Ignorable="d" Height="300.00" Width="300.0">
+    <Grid x:Name="MyLayout">
+        <Ellipse x:Name="Tarcza" HorizontalAlignment="Left" Height="300" Stroke="Black" VerticalAlignment="Top" Width="300">
+            <Ellipse.Fill>
+                <RadialGradientBrush>
+                    <GradientStop Color="#FFD5FFFA"/>
+                    <GradientStop Color="#FF229988" Offset="0.97"/>
+                </RadialGradientBrush>
+            </Ellipse.Fill>
+        </Ellipse>
+        <Ellipse x:Name="wskazowka_kolko" HorizontalAlignment="Left" Height="20" Margin="140,140,0,0" Stroke="#FFF35A5A" VerticalAlignment="Top" Width="20" Fill="#FFF35A5A"/>
+        <Line x:Name="wskazowka" X1="150" X2="150" Y1="170" Y2="0" Fill="Red" StrokeThickness="4" Stroke="Black"></Line>
+        <!--<Line x:Name="wskazowka" X1="150" X2="150" Y1="20" Y2="0" Fill="Red" StrokeThickness="4" Stroke="Black"></Line> -->
+        <Ellipse x:Name="pinezka" Fill="Black" HorizontalAlignment="Left" Height="10" Margin="145,145,0,0" Stroke="Black" VerticalAlignment="Top" Width="10"/>
+        <TextBlock x:Name="text_timer" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="125,173,125,111" TextWrapping="Wrap" Text="mm:ss" FontFamily="GENISO" FontSize="16" FontWeight="Bold"/>
+        <TextBlock x:Name="text_timer_Copy" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="126,196,126,84" TextWrapping="Wrap" Text="mm:ss" FontFamily="GENISO" FontSize="16" FontWeight="Bold"/>
+
+    </Grid>
+</UserControl>
